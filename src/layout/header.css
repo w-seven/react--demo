@@ -1,0 +1,13 @@
+.logOut {
+    float: right;
+    width: 100px;
+    margin-top: 7px !important;
+  }
+.ant-menu-item {
+    margin-bottom: 10px;
+  }
+
+.name span{
+    font-weight: 600
+}
+  

@@ -1,0 +1,45 @@
+.login-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    z-index: 999;
+}
+
+.box{
+    position: relative;
+    top: 50%;
+    margin-top: -170px;
+}
+
+.box p{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'cursive';
+    margin-bottom: 1.4%;
+    color: #888;
+}
+
+.login-wrap{
+    width: 24%;
+    margin: 0 auto;
+    border: 1px #ccc solid;
+    padding: 2%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.login-wrapper{
+    text-align: center;
+    margin: 0 auto;
+}
+.login-form {
+    max-width: 300px;
+  }
+  .login-form-forgot {
+    float: right;
+  }
+.login-form-button {
+    width: 100%;
+  }

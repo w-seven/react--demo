@@ -27,10 +27,36 @@ const Template = Loadable({
     loading: Loading
 })
 
-const BaskInfo = Loadable({
+const StudentInfo = Loadable({
     loader: () => import('../pages/studentsInfo'),
     loading: Loading
 })
+
+const APoorStudentInfo = Loadable({
+    loader: () => import('../pages/studentsInfo/aPoorStudent'),
+    loading: Loading
+})
+
+const LearnDifficultStuInfo = Loadable({
+    loader: () => import('../pages/studentsInfo/stuLearnDifficultInfo'),
+    loading: Loading
+})
+
+const StuAnomieInfo = Loadable({
+    loader: () => import('../pages/studentsInfo/stuAnomie'),
+    loading: Loading
+})
+
+const StuhasReligionInfo = Loadable({
+    loader: () => import('../pages/studentsInfo/hasReligionStu'),
+    loading: Loading
+})
+
+const StuMinorityInfo = Loadable({
+    loader: () => import('../pages/studentsInfo/minorityStu'),
+    loading: Loading
+})
+
 const GradeInfo = Loadable({
     loader: () => import('../pages/home'),
     loading: Loading
@@ -47,8 +73,14 @@ const Contents = () => (
            <Route path="/userInfo" component={UserInfo} />
            <Route path="/roleInfo" component={RoleInfo} />
            <Route path="/template" component={Template} />
-           <Route path="/baskInfo" component={BaskInfo} />
-           <Route path="/gradeInfo" component={GradeInfo} />
+           <Route path="/studentInfo" component={StudentInfo} />
+           <Route path="/religion" component={StuhasReligionInfo} />
+           <Route path="/minority" component={StuMinorityInfo} />
+           <Route path="/anomie" component={StuAnomieInfo} />
+           <Route path="/learnDifficultStu" component={LearnDifficultStuInfo} />
+           <Route path="/ApoorStu" component={APoorStudentInfo} />
+           <Route path="/ApoorStu" component={APoorStudentInfo} />
+           <Route path="/summaryData" component={GradeInfo} />
        </Switch>
     </Content>
 )

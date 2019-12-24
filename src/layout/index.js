@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { Layout, Menu, Icon, Avatar } from 'antd'
+import { Layout, Menu, Icon } from 'antd'
 import menuList from '../utils/menuList'
 import Contents from './contents'
 import Header from './header'
@@ -24,7 +24,7 @@ class BasicLayout extends Component {
         console.log(this.props)
         return (
             <Layout className="container-all">
-                <Sider collapsible collapsed={this.state.collapsed}><div className="logo" />
+                <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}><div className="logo" />
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" className="menu">
                         {menuList.map((subMenu) => {
                             if(subMenu.children && subMenu.children.length){
@@ -66,12 +66,20 @@ class BasicLayout extends Component {
             </Layout>
         )
     }
-}
 
-const stateToProps = (state) => {
-    return {
-        router: state.route
+    componentDidMount(){
+        console.log("basklayout", this.props)
     }
 }
 
-export default connect(stateToProps, null)(BasicLayout);
+const mapStateToProps = (state) => {
+    return {
+        ...state
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BasicLayout);

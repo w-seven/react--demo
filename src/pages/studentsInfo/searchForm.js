@@ -14,9 +14,9 @@ class SearchForm extends Component {
     getFields() {
         const count = 8;
         const { getFieldDecorator } = this.props.form;
-        const labelNames = ['系部', '专业', '班级', '姓名', '学号', '辅导员', '班主任', '公寓及寝室号']
+        const labelNames = ['专业', '班级', '姓名', '学号']
         const children = [];
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 4; i++) {
             children.push(
                 <Col span={6} key={i} style={{ display: i < count ? 'block' : 'none' }}>
                     <Form.Item label={labelNames[i]}>
@@ -52,7 +52,7 @@ class SearchForm extends Component {
             <Form className="ant-advanced-search-form" onSubmit={this.handleSearch}>
                 <Row gutter={10}>{this.getFields()}</Row>
                 <Row>
-                    <Col span={12} style={{ textAlign: 'left' }}>
+                    {/* <Col span={12} style={{ textAlign: 'left' }}>
                         <Button type="primary">
                             提交/审核
                         </Button>
@@ -62,8 +62,8 @@ class SearchForm extends Component {
                         <Button style={{ marginLeft: 8 }}>
                             批量导出
                         </Button>
-                    </Col>
-                    <Col span={12} style={{ textAlign: 'right' }}>
+                    </Col> */}
+                    <Col span={24} style={{ textAlign: 'right' }}>
                         <Button type="primary" htmlType="submit">
                             搜索
                         </Button>
